@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Administración de Usuarios";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<h1>Administración de Usuarios</h1>
+
+<div class="text-right">
+    <button class="btn btn-danger" onclick="location.href='/Home/Agg_usu'; return false;">Agregar Nuevo Usuario</button>
+</div>
+
+
+
+<div class="table-container mt-3">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.TablaUsuarios != null)
+            {
+                @Html.Raw(ViewBag.TablaUsuarios)
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center"> Presione "Mostrar Usuarios" para cargar los datos.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class=" text-center mt-3">
+    <form method="get" action="/bdd/mostrar">
+        <button type="submit" class="btn btn-danger">Mostrar Usuarios</button>
+    </form>
+</div>

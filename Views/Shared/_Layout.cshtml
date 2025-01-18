@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Tattoo Shop</title>
+
+    <!-- Estilos -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar fija al desplazarse -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img id="menulogo" src="~/imagenes/logo_tat.jpeg" alt="Logo" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#sobreN">Sobre Nosotros</a> <!-- ID del Index -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#equipo">Equipo</a> <!-- ID del Index -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#seccion-contacto">Contacto</a> <!-- ID del Index -->
+                    </li>
+                </ul>
+                <a class="btn btn-outline-light" href="/Home/Login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Espaciado para evitar solapamiento con la barra fija -->
+    <div style="height: 80px;"></div>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-">
+        <p>&copy; 2024 Tattoo Shop. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

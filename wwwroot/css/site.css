@@ -1,0 +1,193 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Títulos uniformes */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #800020; /* Rojo vinotinto */
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+/* Párrafos uniformes */
+p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555555; /* Gris oscuro para contraste */
+    
+}
+
+/* Color de texto destacado */
+.text-primary {
+    color: #800020 !important; /* Rojo vinotinto */
+}
+
+.carousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
+.banner {
+    background-position: center;
+    color: white;
+    padding: 200px 0;
+    text-align: center;
+}
+
+    .banner h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+#equipo {
+    text-align: center;
+}
+
+.d-block {
+    height: 500px;
+    object-fit: cover;
+}
+
+div {
+    justify-content: start;
+ 
+}
+
+#imgequip {
+    width: 180px;
+    height: 160px;
+}
+
+#cont {
+    text-align: center;
+}
+
+#seccion-login {
+    text-align: center;
+}
+
+#menulogo {
+    height: 60px;
+}
+
+prueba:hover {
+    filter: opacity(.5);
+}
+
+/* Tabla para vista ventas */
+.table-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+    .table-container table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #f9f9f9;
+    }
+
+    .table-container th,
+    .table-container td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    .table-container th {
+        background-color: #ef5350;
+        color: white;
+        font-weight: bold;
+    }
+
+    .table-container tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table-container tr:hover {
+        background-color: #ffe0e0;
+    }
+
+    .table-container td {
+        color: #333;
+    }
+/* Estilos por clase de estado */
+.pendiente {
+    color: red; /* Texto rojo */
+    font-weight: bold;
+}
+
+.pagado {
+    color: blue; /* Texto azul */
+    font-weight: bold;
+}
+
+.entregado {
+    color: green; /* Texto verde */
+    font-weight: bold;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}

@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Agregar Nuevo Usuario";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+
+<h1>Agregar Nuevo Usuario</h1>
+
+@ViewBag.Mensaje
+
+<div class="form-container">
+    <form asp-controller="bdd" asp-action="guardarNuevoUsuario" method="post">
+        <div class="form-group">
+            <label for="RUT">RUT</label>
+            <input type="text" id="RUT" name="RUT" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input type="text" id="Nombre" name="Nombre" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input type="text" id="Apellido" name="Apellido" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="Correo">Correo Electrónico</label>
+            <input type="email" id="Correo" name="Correo" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="Rol">Rol</label>
+            <select id="Rol" name="Rol" class="form-control" required>
+                @foreach (var rol in new[] { "ADMINISTRADOR", "VENDEDOR" })
+                {
+                    <option value="@rol">@rol</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="Clave">Clave</label>
+            <input type="password" id="Clave" name="Clave" class="form-control" required />
+            <small id="claveHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="text-right">
+            <button type="submit" class="btn btn-danger">Guardar</button>
+            <a onclick="location.href='/bdd/mostrar'; return false;" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('Clave').addEventListener('input', function() {
+        var clave = this.value;
+        var claveHelp = document.getElementById('claveHelp');
+        var regexMayuscula = /[A-Z]/;
+        var regexMinuscula = /[a-z]/;
+        var regexNumero = /[0-7]/;
+
+        if (clave.length > 10 && regexMayuscula.test(clave) && regexMinuscula.test(clave) && regexNumero.test(clave)) {
+            claveHelp.textContent = 'Clave válida.';
+            claveHelp.style.color = 'green';
+            this.setCustomValidity('');
+        } else {
+            claveHelp.textContent = 'La clave debe tener más de 8 caracteres, al menos una letra mayúscula, una letra minúscula y un número.';
+            claveHelp.style.color = 'red';
+            this.setCustomValidity('Clave inválida.');
+        }
+    });
+</script>
+

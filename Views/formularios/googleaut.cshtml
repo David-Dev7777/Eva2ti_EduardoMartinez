@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Configuración de Google Authenticator";
+}
+
+<h1>Configura tu Google Authenticator</h1>
+
+<p>Usa el siguiente código manual para configurar tu aplicación si ya lo tienes configurado por favor entra a tu aplicacion y escribe el codigo aca abajo:</p>
+
+@if (ViewBag.ManualCode != null)
+{
+    <code>@ViewBag.ManualCode</code>
+}
+else
+{
+    <p>El codigo no es valido.</p>
+}
+
+<form asp-action="VerifyCode" method="post">
+    <div class="form-group">
+        <label for="authCode">Código de autenticación</label>
+        <input type="text" class="form-control" id="authCode" name="authCode" placeholder="Ingresa tu código" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Verificar</button>
+</form>

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Error_Usu";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+<h1>Acceso Denegado</h1>
+<p>@ViewBag.MensajeLoguin</p>
+<a href="@Url.Action("Ventas", "Home")" class="btn btn-danger">Volver al Inicio</a>
+

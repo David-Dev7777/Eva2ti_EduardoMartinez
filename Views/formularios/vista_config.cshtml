@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewData["Title"] = "vista_config";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <h1 class="mb-4">Configuración de Página</h1>
+
+    <!-- Configuración General -->
+    <section class="mb-5">
+        <h2 class="fs-4 mb-3">Configuración General</h2>
+        <form>
+            <div class="mb-3">
+                <label for="siteTitle" class="form-label">Título del Sitio</label>
+                <input type="text" class="form-control" id="siteTitle" placeholder="Título del sitio" />
+            </div>
+            <div class="mb-3">
+                <label for="siteLogo" class="form-label">Logo del Sitio</label>
+                <input type="file" class="form-control" id="siteLogo" />
+            </div>
+            <div class="mb-3">
+                <label for="siteTheme" class="form-label">Tema del Sitio</label>
+                <select class="form-select" id="siteTheme">
+                    <option value="light">Claro</option>
+                    <option value="dark">Oscuro</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+
+    <!-- Información de Contacto -->
+    <section class="mb-5">
+        <h2 class="fs-4 mb-3">Información de Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="emailContacto" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="emailContacto" placeholder="contacto@tu-pagina.com" />
+            </div>
+            <div class="mb-3">
+                <label for="telefonoContacto" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefonoContacto" placeholder="+569 1234 5678" />
+            </div>
+            <div class="mb-3">
+                <label for="direccionContacto" class="form-label">Dirección</label>
+                <textarea class="form-control" id="direccionContacto" rows="2" placeholder="Escribe tu dirección aquí..."></textarea>
+            </div>
+        </form>
+    </section>
+
+
+    <section>
+        <form>
+    <h2 class="fs-4 mb-3">Configuración Idioma</h2>
+    <label for="siteTheme" class="form-label">Idioma</label>
+    <select class="form-select" id="siteTheme">
+        <option value="Español">Español</option>
+        <option value="Ingles">Ingles</option>
+            </select>
+        </form>
+    </section>
+    <!-- Botones de Acción -->
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-danger me-3" type="button" onclick="alert('Configuración guardada')">Guardar Cambios</button>
+        <button class="btn btn-secondary" type="button" onclick="alert('Cambios descartados')">Cancelar</button>
+    </div>
+</div>

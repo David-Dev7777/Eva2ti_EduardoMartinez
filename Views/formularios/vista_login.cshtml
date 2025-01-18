@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+<section id="seccion-login" class="my-5">
+    <div class="container">
+        <h2 id="inic">Iniciar Sesión</h2>
+        <p id="acced">Accede a tu cuenta para gestionar tus pedidos y preferencias.</p>
+        <form asp-controller="Auth" asp-action="ValidarCredenciales" method="post" class="w-50 mx-auto">
+            <div class="mb-3">
+                <label for="Correo" class="form-label">Correo Electrónico</label>
+                <input type="text" class="form-control" id="rut" name="rut" placeholder="Ingresa su Rut" required>
+            </div>
+            <div class="mb-3">
+                <label for="Clave" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="Clave" name="Clave" placeholder="Ingresa tu contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Iniciar Sesión</button>
+        </form>
+
+        @ViewBag.Error
+    </div>
+</section>

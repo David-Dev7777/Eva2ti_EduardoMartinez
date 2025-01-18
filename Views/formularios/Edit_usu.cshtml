@@ -1,0 +1,51 @@
+﻿@model Eva2ti_EduardoMartinez.Models.Usuario
+
+@{
+    ViewData["Title"] = "Editar Usuario";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<h1>Editar Usuario</h1>
+
+<div class="form-container">
+    <form method="post" action="/bdd/guardarModificacion">
+        <input type="hidden" name="RUT" value="@Model.RUT" />
+
+        <div class="form-group">
+            <label for="Nombre">Nombre</label>
+            <input type="text" id="Nombre" name="Nombre" class="form-control" value="@Model.Nombre" required />
+        </div>
+        <div class="form-group">
+            <label for="Apellido">Apellido</label>
+            <input type="text" id="Apellido" name="Apellido" class="form-control" value="@Model.Apellido" required />
+        </div>
+        <div class="form-group">
+            <label for="Correo">Correo Electrónico</label>
+            <input type="email" id="Correo" name="Correo" class="form-control" value="@Model.Correo" required />
+        </div>
+        <div class="form-group">
+            <label for="Rol">Rol</label>
+            <select id="Rol" name="Rol" class="form-control" required>
+                @foreach (var rol in new[] { "ADMINISTRADOR", "VENDEDOR" })
+                {
+                    if (ViewBag.Rol == rol)
+                    {
+                        <option value="@rol" selected>@rol</option>
+                    }
+                    else
+                    {
+                        <option value="@rol">@rol</option>
+                    }
+                }
+            </select>
+        </div>
+
+
+        <div class="text-right">
+            <button type="submit" class="btn btn-danger">Guardar Cambios</button>
+            <button type="button" onclick="location.href='/bdd/mostrar'; return false;" class="btn btn-secondary">Cancelar</button>
+        </div>
+    </form>
+</div>

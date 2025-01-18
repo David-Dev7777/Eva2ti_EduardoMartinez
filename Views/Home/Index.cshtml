@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<!-- Carrusel -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="@Url.Content("~/imagenes/tatuador_alejandro.jpg")" class="d-block w-100"  alt="Tatuador en acción">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tatuador Profesional</h5>
+                <p>Perfeccionando el arte en cada detalle.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="@Url.Content("~/imagenes/maquina-tattoo.jpg")" class="d-block w-100" alt="Máquina de Tattoo">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Equipos de Alta Calidad</h5>
+                <p>Los mejores equipos para tus proyectos creativos.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="@Url.Content("~/imagenes/ajugas_tatto.jpg")" class="d-block w-100"  alt="Agujas de tatuaje">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Accesorios Precisos</h5>
+                <p>Herramientas diseñadas para la perfección.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Sobre Nosotros -->
+<section class="container-fluid" id="sobreN">
+    <div class="row w-75 mx-auto my-5">
+        <h2 class="my-5">Sobre Nosotros</h2>
+        <div class="col-lg-6 d-flex  my-5">
+            <img id="imgequip" src="~/imagenes/desarrollo.png" alt="Desarrollo"  />
+            <div>
+                <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+                <p class="px-4">Creamos soluciones personalizadas para optimizar tu inventario.</p>
+            </div>
+        </div>
+        <div class="col-lg-6 d-flex  my-5">
+            <img id="imgequip" src="~/imagenes/comunicaciones.png" alt="Comunicación"  />
+            <div>
+                <h3 class="fs-5 mt-4 px-4 pb-1">Comunicación</h3>
+                <p class="px-4">Facilitamos una experiencia fluida y efectiva.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Equipo -->
+<section id="equipo" class="my-5">
+    <div class="w-75 mx-auto">
+        <h1>Un equipo pequeño con <span class="text-primary">Resultados grandes</span></h1>
+        <p>Trabajamos con expertos dedicados para hacer realidad tus ideas.</p>
+    </div>
+    <img class="img-fluid" src="~/imagenes/equipo.jpg" alt="Nuestro equipo" />
+</section>
+
+<!-- Contacto -->
+<section id="seccion-contacto" class="border-bottom border-secondary border-2">
+    <div class="container">
+        <h2 class=" my-5">Contacto</h2>
+        <p id="cont">Estamos aquí para ayudarte a hacer realidad tus ideas y proyectos.</p>
+        <form class="w-50 mx-auto">
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Juan Pérez" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button class="btn btn-danger w-100" onclick="alert('Información enviada')">Enviar Comentarios</button>
+
+          
+        </form>
+    </div>
+</section>
+
+
