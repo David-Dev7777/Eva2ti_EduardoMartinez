@@ -54,6 +54,7 @@
         var regexMayuscula = /[A-Z]/;
         var regexMinuscula = /[a-z]/;
         var regexNumero = /[0-7]/;
+        var hola = "";
 
         if (clave.length > 10 && regexMayuscula.test(clave) && regexMinuscula.test(clave) && regexNumero.test(clave)) {
             claveHelp.textContent = 'Clave válida.';
